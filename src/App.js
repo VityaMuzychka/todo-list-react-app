@@ -12,7 +12,7 @@ function App() {
       <button onClick={() => setTodoList([...todoList, newTask])}>Add Task</button>
      </div>
      <div className='list'>
-      {todoList.map(task => <h1>{task}</h1>)}
+      {todoList.map(task => <div> <h1>{task}</h1> <button> X </button> </div>)}
      </div>
     </div>
   );
