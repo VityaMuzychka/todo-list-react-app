@@ -8,10 +8,12 @@ function App() {
   return (
     <div className="App">
      <div className='addTask'>
-      <input />
-      <button>Add Task</button>
+      <input onChange={(event) => setNewTask(event.target.value)}/>
+      <button onClick={() => setTodoList([...todoList, newTask])}>Add Task</button>
      </div>
-     <div className='list'></div>
+     <div className='list'>
+      {todoList.map(task => <h1>{task}</h1>)}
+     </div>
     </div>
   );
 }
